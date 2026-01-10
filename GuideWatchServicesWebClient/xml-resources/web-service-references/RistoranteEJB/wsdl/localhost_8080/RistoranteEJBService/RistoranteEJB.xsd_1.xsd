@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ristoranti/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ristoranti/">
+
+<xs:element name="aggiornaRistorante" type="tns:aggiornaRistorante"/>
+
+<xs:element name="aggiornaRistoranteResponse" type="tns:aggiornaRistoranteResponse"/>
+
+<xs:element name="creaRistorante" type="tns:creaRistorante"/>
+
+<xs:element name="creaRistoranteResponse" type="tns:creaRistoranteResponse"/>
+
+<xs:element name="eliminaRistorante" type="tns:eliminaRistorante"/>
+
+<xs:element name="eliminaRistoranteResponse" type="tns:eliminaRistoranteResponse"/>
+
+<xs:element name="findByCittà" type="tns:findByCittà"/>
+
+<xs:element name="findByCittàResponse" type="tns:findByCittàResponse"/>
+
+<xs:element name="findByGuida" type="tns:findByGuida"/>
+
+<xs:element name="findByGuidaResponse" type="tns:findByGuidaResponse"/>
+
+<xs:element name="findByID" type="tns:findByID"/>
+
+<xs:element name="findByIDResponse" type="tns:findByIDResponse"/>
+
+<xs:element name="getAll" type="tns:getAll"/>
+
+<xs:element name="getAllResponse" type="tns:getAllResponse"/>
+
+<xs:element name="numRistorantiAncoraInGuida" type="tns:numRistorantiAncoraInGuida"/>
+
+<xs:element name="numRistorantiAncoraInGuidaResponse" type="tns:numRistorantiAncoraInGuidaResponse"/>
+
+<xs:element name="numRistorantiByGuida" type="tns:numRistorantiByGuida"/>
+
+<xs:element name="numRistorantiByGuidaResponse" type="tns:numRistorantiByGuidaResponse"/>
+
+<xs:complexType name="findByCittà">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCittàResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ristorante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ristorante">
+<xs:sequence>
+<xs:element name="ancoraPresenteInGuida" type="xs:boolean"/>
+<xs:element name="annoRiconoscimento" type="xs:int"/>
+<xs:element name="città" type="xs:string" minOccurs="0"/>
+<xs:element name="cucina" type="xs:string" minOccurs="0"/>
+<xs:element name="guida" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="nomeRistorante" type="xs:string" minOccurs="0"/>
+<xs:element name="riconoscimento" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="numRistorantiByGuida">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="numRistorantiByGuidaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByGuida">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByGuidaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ristorante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaRistorante">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ristorante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaRistoranteResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="numRistorantiAncoraInGuida">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="numRistorantiAncoraInGuidaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaRistorante">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ristorante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaRistoranteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ristorante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaRistorante">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ristorante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaRistoranteResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ristorante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ristorante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
