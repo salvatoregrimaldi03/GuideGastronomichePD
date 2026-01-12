@@ -25,4 +25,21 @@ public class GuideWatchServicesWebClient {
         ristoranti.RistoranteEJB port = service.getRistoranteEJBPort();
         return port.numRistorantiByGuida(guida);
     }
+
 }
+/*Alternativa
+    package guidewatchserviceswebclient;
+
+public class GuideWatchServicesWebClient {
+    public static void main(String[] args) {
+        int numRistoranti = totNumRistoranti();
+        System.out.println("Il numero totale di ristanti ancora presenti in guida e che appartengono alla guida Michelin sono "+numRistoranti);
+    }
+    
+    private static int totNumRistoranti() {
+        ristoranti.RistoranteEJBService service = new ristoranti.RistoranteEJBService();
+        ristoranti.RistoranteEJB port = service.getRistoranteEJBPort();
+        return port.totNumRistoranti();
+    }
+}
+*/
