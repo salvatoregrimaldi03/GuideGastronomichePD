@@ -14,4 +14,6 @@ public interface RistoranteEJBRemote {
     void aggiornaRistorante(Ristorante r);
     int numRistorantiAncoraInGuida();
     int numRistorantiByGuida(String guida);
+    //Alternativa: eliminare int numRistorantiAncoraInGuida() e int numRistorantiByGuida(String guida)
+    //ed inserire int totNumRistoranti();
 }
