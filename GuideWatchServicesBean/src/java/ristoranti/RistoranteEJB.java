@@ -72,4 +72,14 @@ public class RistoranteEJB implements RistoranteEJBRemote {
         Long ris = query.getSingleResult();
         return ris.intValue();
     }
+
+    /*Alternativa
+    @Override
+    public int totNumRistoranti() {
+        TypedQuery<Long> query = em.createQuery("SELECT COUNT(r) FROM Ristorante r WHERE r.AncoraPresenteInGuida = true AND r.Guida = :guida", Long.class);
+        query.setParameter("guida", "Michelin");
+        Long ris = query.getSingleResult();
+        return ris.intValue();
+    }
+    */
 }
